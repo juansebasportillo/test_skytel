@@ -61,7 +61,7 @@ class ApiController extends Controller
         $json_data['token'] = $token;
   
         $fileName = time() . '_datos_formulario.json';
-        $fileStorePath = public_path('/upload/json/'.$fileName);
+        $fileStorePath = public_path($fileName);
   
         File::put($fileStorePath, json_encode($json_data));
 
